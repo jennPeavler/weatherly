@@ -1,3 +1,6 @@
+#API Key
+./lib/components/key.js
+
 # Logs
 logs
 *.log
