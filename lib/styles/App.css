@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+@import 'CurrentConditions';
+@import 'HourlyForecastCard';
+@import 'DailyForecastCard';
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  /*background-image: url(http://img06.deviantart.net/49f1/i/2013/110/f/1/sunny_sky_by_delphineeraklea-d62cwqj.jpg);*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: inset 0 0 0 1000px rgba(67,157,120,.4);
+  margin: 0
+}
+
+#application {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#background-layer {
+  background-color: #419D78;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#app-container {
+  width: 90%;
+}
+
+#greeting {
+  color: green;
+}
