@@ -5,12 +5,16 @@ import { shallow, mount } from 'enzyme'
 let app;
 let wrapperShallow;
 let wrapperMount;
+let searchField;
+let submitButton;
 
 describe('App', () => {
   beforeEach(() => {
     app = new App;
     wrapperShallow = shallow(<App />)
     wrapperMount = mount(<App />)
+    searchField = wrapperMount.find('input[type="text"]')
+    submitButton = wrapperMount.find('input[type="submit"]')
   })
 
   it('should start with no location', () => {
@@ -27,12 +31,18 @@ describe('App', () => {
     expect(greeting.props().children).toEqual('Good Afternoon');
   })
 
-  it('should submit a city for which to find the weather', () => {
-    let searchField = wrapperMount.find('input[type="text"]')
-    let submitButton = wrapperMount.find('input[type="submit"]')
-
+  it('should allow user to type a city for which to find the weather', () => {
     searchField.simulate('change', {target: {value: 'Chicago, IL'}})
     expect(searchField.props().value).toEqual('Chicago, IL')
-
   })
+
+  
+
+  // it('should display the current city after it is submitted', () => {
+  //   searchField.simulate('change', {target: {value: 'Chicago, IL'}})
+  //   submitButton.simulate('click')
+  //   let currentCity = wrapperMount.find('#current-location')
+  //   console.log(wrapperMount.debug())
+  //   console.log(currentCity.node)
+  // })
 })
