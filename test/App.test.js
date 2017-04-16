@@ -31,6 +31,22 @@ describe('App', () => {
     expect(greeting.props().children).toEqual('Good Afternoon');
   })
 
+  it('should have a Controls component', () => {
+    expect(wrapperShallow.find('Controls').length).toEqual(1)
+  })
+
+  it('should have a CurrentConditions component', () => {
+    expect(wrapperShallow.find('CurrentConditions').length).toEqual(1)
+  })
+
+  it('should have an HourlyForecast component', () => {
+    expect(wrapperShallow.find('HourlyForecast').length).toEqual(1)
+  })
+
+  it('should have a DailyForecast component', () => {
+    expect(wrapperShallow.find('DailyForecast').length).toEqual(1)
+  })
+
   it('should allow user to type a city for which to find the weather', () => {
     searchField.simulate('change', {target: {value: 'Chicago, IL'}})
     expect(searchField.props().value).toEqual('Chicago, IL')
