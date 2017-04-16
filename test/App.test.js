@@ -36,7 +36,7 @@ describe('App', () => {
     expect(searchField.props().value).toEqual('Chicago, IL')
   })
 
-  
+
 
   // it('should display the current city after it is submitted', () => {
   //   searchField.simulate('change', {target: {value: 'Chicago, IL'}})
