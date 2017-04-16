@@ -52,13 +52,11 @@ describe('App', () => {
     expect(searchField.props().value).toEqual('Chicago, IL')
   })
 
-
-
   // it('should display the current city after it is submitted', () => {
   //   searchField.simulate('change', {target: {value: 'Chicago, IL'}})
   //   submitButton.simulate('click')
-  //   let currentCity = wrapperMount.find('#current-location')
+  //   // let currentCity = wrapperMount.find('#current-location')
   //   console.log(wrapperMount.debug())
-  //   console.log(currentCity.node)
+  //   // console.log(currentCity.node)
   // })
 })
