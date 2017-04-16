@@ -1,6 +1,7 @@
 import Controls from '../lib/components/Controls'
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import App from '../lib/components/App'
 
 let controls;
 let wrapperShallow;
@@ -19,6 +20,14 @@ describe('Controls', () => {
     submitButton = wrapperShallow.find('input[type="submit"]')
     mockFn = jest.fn()
   })
+
+  // it('should change the input state when a location is submitted', () => {
+  //   wrapperShallow = shallow(<Controls handleClick = {App.handleSubmit} />)
+  //   searchField.simulate('change', {target: {value: 'Chicago, IL'}})
+  //   submitButton.simulate('click')
+  //   console.log(wrapperShallow.debug())
+  //   // expect.wrapperShallow.state('input').toEqual('Chicago, IL')
+  // })
 
   it('Controls.submitItem should be called when the submit button is clicked', () => {
     wrapperShallow = shallow(<Controls handleClick={mockFn} />)

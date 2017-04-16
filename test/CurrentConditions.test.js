@@ -6,7 +6,7 @@ import MockData_2 from './MockData/MockData_2'
 describe('CurrentConditions', () => {
   it('should render the current conditions', () => {
     let wrapper = shallow(<CurrentConditions weatherObj = {MockData_2()} location = 'Chicago, IL'/>)
-    let currentConditions = wrapper.find('#current-conditions')
+    let currentConditions =  wrapper.find('#current-conditions')
     expect(currentConditions.length).toEqual(1)
   })
 
