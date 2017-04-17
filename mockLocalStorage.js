@@ -14,7 +14,4 @@ var localStorageMock = (function() {
 })();
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
-/*"globals": {
-  "$": "require('jquery')"
-  }*/
 window.$ = require('./jquery.js')
