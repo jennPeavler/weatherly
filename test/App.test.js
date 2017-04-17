@@ -27,8 +27,7 @@ describe('App', () => {
 
   it('should have a greeting', () => {
     let greeting = wrapperShallow.find('#greeting')
-
-    expect(greeting.props().children).toEqual('Good Afternoon');
+    expect(greeting.props().children[0]).toEqual('Good ');
   })
 
   it('should have a Controls component', () => {

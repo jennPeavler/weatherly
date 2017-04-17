@@ -12,7 +12,7 @@ describe('CurrentConditions', () => {
 
   it('should render the current location', () => {
     let wrapper = shallow(<CurrentConditions weatherObj = {MockData_2()} location = 'Chicago, IL'/>)
-    let currentLocation = wrapper.find('#current-location')
+    let currentLocation = wrapper.find('#current-city')
     expect(currentLocation.props().children).toEqual('Chicago, IL')
   })
 
@@ -25,14 +25,19 @@ describe('CurrentConditions', () => {
   it('should render the day', () => {
     let wrapper = shallow(<CurrentConditions weatherObj = {MockData_2()} location = 'Chicago, IL'/>)
     let day = wrapper.find('#current-day')
-    expect(day.props().children[1]).toEqual('Monday')
+    expect(day.props().children).toEqual('Monday')
   })
 
-  it('should render a low and high temp', () => {
+  it('should render a low temp', () => {
     let wrapper = shallow(<CurrentConditions weatherObj = {MockData_2()} location = 'Chicago, IL'/>)
-    let low = wrapper.find('#low-temp')
-    let high = wrapper.find('#high-temp')
+    let low = wrapper.find('#low')
+    // console.log(low.props())
     expect(low.props().children).toEqual('70')
+  })
+
+  it('should render a high temp', () => {
+    let wrapper = shallow(<CurrentConditions weatherObj = {MockData_2()} location = 'Chicago, IL'/>)
+    let high = wrapper.find('#high')
     expect(high.props().children).toEqual('85')
   })
 
