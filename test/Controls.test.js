@@ -21,14 +21,6 @@ describe('Controls', () => {
     mockFn = jest.fn()
   })
 
-  // it('should change the input state when a location is submitted', () => {
-  //   wrapperShallow = shallow(<Controls handleClick = {App.handleSubmit} />)
-  //   searchField.simulate('change', {target: {value: 'Chicago, IL'}})
-  //   submitButton.simulate('click')
-  //   console.log(wrapperShallow.debug())
-  //   // expect.wrapperShallow.state('input').toEqual('Chicago, IL')
-  // })
-
   it('Controls.submitItem should be called when the submit button is clicked', () => {
     wrapperShallow = shallow(<Controls handleClick={mockFn} />)
     var button  = wrapperShallow.find('input[type="submit"]');
@@ -37,5 +29,27 @@ describe('Controls', () => {
     button.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1)
   })
+
+  it('should change the input state when a location is submitted', () => {
+    wrapperShallow = shallow(<Controls handleClick = {mockFn} />)
+    var button  = wrapperShallow.find('input[type="submit"]');
+    var search = wrapperShallow.find('#search-input');
+    search.simulate('change', {target: {value: 'Chicago, IL'}})
+    // button.simulate('click')
+    expect(wrapperShallow.state().input).toEqual('Chicago, IL')
+    // expect.wrapperShallow.state('input').toEqual('Chicago, IL')
+  })
+
+  it('should clear the input state on click of submit', () => {
+    wrapperShallow = shallow(<Controls handleClick = {mockFn} />)
+    var button  = wrapperShallow.find('input[type="submit"]');
+    var search = wrapperShallow.find('#search-input');
+    search.simulate('change', {target: {value: 'Chicago, IL'}})
+    expect(wrapperShallow.state().input).toEqual('Chicago, IL')
+    button.simulate('click')
+    expect(wrapperShallow.state().input).toEqual('')
+  })
+
+
 
 })
