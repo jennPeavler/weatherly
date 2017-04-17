@@ -1,3 +1,46 @@
-#day {
-  color: orange;
+@import 'variables';
+
+.daily-forecast-card {
+  text-align: center;
+  padding: 8px;
 }
+
+.daily-forecast-card:hover {
+  background: #75797F;
+}
+
+.daily-temp {
+  display: inline-block;
+}
+
+.daily-temp, .day {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: $primary-text-color
+}
+
+.daily-img {
+  display: block;
+  margin: auto;
+}
+
+.daily-high-temp, .daily-low-temp {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: $primary-text-color
+}
+
+.daily-high-temp {
+  font-size: 15px;
+}
+
+.daily-slash {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+// @media screen and (min-width: 700px) {
+//   .daily-forecast-card {
+//   }
+// }

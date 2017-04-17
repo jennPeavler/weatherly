@@ -8,9 +8,12 @@
   border: none;
   border-bottom: 1px solid #FFF;
   background: none;
-  
+  color: $primary-text-color;
 }
 
+#search-input::-webkit-input-placeholder {
+  color: $primary-text-color;
+}
 
 #search-label {
   display: flex;

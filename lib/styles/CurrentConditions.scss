@@ -29,6 +29,7 @@
 
 #current-temp, #high-low-container, #description {
   width: 80%;
+  margin: auto;
 }
 
 #current-temp-container {
@@ -72,11 +73,11 @@
 //   font-weight: 300;
 // }
 
+
 .slash {
   margin-left: 4px;
   margin-right: 4px;
 }
-
 #description {
   color: $primary-text-color;
 }

@@ -2,7 +2,11 @@
 
 .hourly-forecast-card {
   text-align: center;
-  padding: 5px;
+  padding: 8px;
+}
+
+.hourly-forecast-card:hover {
+  background: #75797F;
 }
 
 .hourly-temp {

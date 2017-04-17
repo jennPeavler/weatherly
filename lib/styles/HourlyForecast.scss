@@ -1,6 +1,8 @@
 
 #hourly-forecast {
   display: flex;
-  overflow-x: scroll;
-  // white-space: nowrap;
+  overflow: auto;
+  white-space: nowrap;
+  background: #274053;
+  margin-top: 10px;
 }
