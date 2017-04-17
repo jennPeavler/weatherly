@@ -52,14 +52,16 @@ describe('App', () => {
     expect(searchField.props().value).toEqual('Chicago, IL')
   })
 
-  it.skip('should display the current city after it is submitted', () => {
+  it('should display the current city after it is submitted', () => {
     searchField.simulate('change', {target: {value: 'Chicago, IL'}})
     submitButton.simulate('click')
-    submitButton.simulate('click')
+
+    //NEED TO USE MOCK DATA HERE BECAUSE THE API CALL IS NOT RETURNING BEFORE THE STATE CHANGES???
     // let currentCity = wrapperMount.find('#current-location')
-    console.log(wrapperMount.debug())
-    console.log(wrapperMount.state())
-    console.log(wrapperMount.find('#controls').root.props())
+    // console.log(wrapperMount.debug())
+    // console.log(wrapperMount.state())
+    console.log(wrapperMount.find('#controls'))
+    // console.log(wrapperMount.find('#controls').root.state())
     // console.log(currentCity.node)
   })
 })
