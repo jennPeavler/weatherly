@@ -2,8 +2,26 @@
 
 .hourly-forecast-card {
   text-align: center;
+  padding: 5px;
 }
 
-.time{
-  color: blue;
+.hourly-temp {
+  display: inline-block;
 }
+
+.hourly-temp, .time {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: $primary-text-color
+}
+
+.hourly-img {
+  display: block;
+  margin: auto;
+}
+
+
+// @media screen and (min-width: 700px) {
+//   .hourly-forecast-card {
+//   }
+// }

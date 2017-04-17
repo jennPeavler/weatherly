@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900');
 @import 'CurrentConditions';
+@import 'Controls';
 @import 'HourlyForecast';
 @import 'HourlyForecastCard';
 @import 'DailyForecastCard';
@@ -15,7 +16,7 @@ body {
 }
 
 #application {
-  width: 90%;
+  // width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,9 +33,19 @@ body {
 }
 
 #app-container {
-  width: 90%;
+  width: 95%;
+}
+
+#greeting-container {
+  text-align: center;
 }
 
 #greeting {
-  color: green;
+  margin: 5px;
+  color: $primary-text-color;
+}
+
+#instructions {
+  margin: 8px;
+  color: $primary-text-color;
 }

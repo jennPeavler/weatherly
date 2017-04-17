@@ -1,6 +1,6 @@
 
 #hourly-forecast {
   display: flex;
-  overflow: auto;
-  white-space: nowrap;
+  overflow-x: scroll;
+  // white-space: nowrap;
 }
