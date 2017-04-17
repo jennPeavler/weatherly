@@ -1,0 +1,32 @@
+
+#search-container {
+  display: flex;
+  justify-content: center;
+}
+
+#search-input {
+  border: none;
+  border-bottom: 1px solid #FFF;
+  background: none;
+  color: $primary-text-color;
+}
+
+#search-input::-webkit-input-placeholder {
+  color: $primary-text-color;
+}
+
+#search-label {
+  display: flex;
+  vertical-align: middle;
+  padding-left: 8px
+}
+
+#search-submit-button {
+  display: none; //hide the 'submit' button
+}
+
+#search-icon {
+  // fill:#FFF;
+  height: 25px;
+  width: 25px;
+}

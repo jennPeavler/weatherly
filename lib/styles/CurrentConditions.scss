@@ -1,0 +1,83 @@
+@import 'variables';
+
+#current-location {
+  text-align: center;
+}
+
+#current-location h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: $primary-text-color
+}
+
+#current-location h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $primary-text-color
+}
+
+#current-location img {
+  width: 100px;
+}
+
+#current-temp-container, #current-description {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  width: 50%;
+}
+
+#current-temp, #high-low-container, #description {
+  width: 80%;
+  margin: auto;
+}
+
+#current-temp-container {
+  flex-direction: column;
+}
+
+#high-low-container {
+  text-align: center;
+}
+
+#current-temp {
+  text-align: center;
+}
+
+#current-temp h1 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: $primary-text-color
+}
+
+.current-temp-class {
+  display: inline-block;
+  font-size: 36px;
+  color: $primary-text-color
+}
+
+.high-temp, .low-temp {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: $primary-text-color
+}
+
+.high-temp {
+  font-weight: 600;
+  font-size: 25px
+}
+
+// .low-temp {
+//   font-weight: 300;
+// }
+
+
+.slash {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#description {
+  color: $primary-text-color;
+}
