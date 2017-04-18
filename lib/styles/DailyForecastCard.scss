@@ -2,11 +2,18 @@
 
 .daily-forecast-card {
   text-align: center;
-  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  min-width: 120px;
+}
+
+.daily-forecast-card:last-of-type {
+  border-right: none;
 }
 
 .daily-forecast-card:hover {
-  background: #75797F;
+  background: rgba(117, 121, 127, 0.4);
 }
 
 .daily-temp {
@@ -39,8 +46,3 @@
   margin-left: 4px;
   margin-right: 4px;
 }
-
-// @media screen and (min-width: 700px) {
-//   .daily-forecast-card {
-//   }
-// }
