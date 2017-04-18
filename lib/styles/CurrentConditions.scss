@@ -1,5 +1,12 @@
 @import 'variables';
 
+#invalid-city-response {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50px;
+  color: $primary-text-color;
+}
+
 #current-location {
   box-sizing: border-box;
   text-align: center;
@@ -17,7 +24,7 @@
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 5px;
-  color: $primary-text-color
+  color: $primary-text-color;
 }
 
 #img-temp-container {
@@ -88,5 +95,5 @@
     margin-left: 8px;
     margin-right: 8px;
   }
-  
+
 }
