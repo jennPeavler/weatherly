@@ -49,7 +49,4 @@ describe('Controls', () => {
     button.simulate('click')
     expect(wrapperShallow.state().input).toEqual('')
   })
-
-
-
 })
