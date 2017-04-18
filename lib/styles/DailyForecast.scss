@@ -1,16 +1,14 @@
 
-#daily-forecast-container {
-  // overflow: hidden;
-}
-
 #daily-forecast {
   display: flex;
   overflow: auto;
   white-space: nowrap;
-  background: #274053;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 20px;
-}
-
-::-webkit-scrollbar {
-    height: 0px;  /* remove scrollbar space */
+  margin-bottom: 10px;
+  max-width: 1450px;
 }

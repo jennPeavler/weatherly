@@ -1,8 +1,20 @@
 
 #hourly-forecast {
   display: flex;
+  text-align: center;
   overflow: auto;
   white-space: nowrap;
-  background: #274053;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 10px;
+  max-width: 700px;
+}
+
+@media screen and (min-width: 700px) {
+  #hourly-forecast {
+    justify-content: center;
+  }
 }
