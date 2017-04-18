@@ -46,4 +46,11 @@ describe('CurrentConditions', () => {
     let description = wrapper.find('#description')
     expect(description.props().children).toEqual('cloudy with a chance of sky falling')
   })
+
+  it('should render 🌈 Enter a valid city and state to get going 🌈 ', () => {
+    let wrapper = shallow(<CurrentConditions weatherObj = {{}} location = ''/>)
+    let warningMessage = wrapper.find('#invalid-city-response')
+    expect(warningMessage.props().children).toEqual('🌈 Enter a valid city and state to get going 🌈')
+  })
+
 })

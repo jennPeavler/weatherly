@@ -40,7 +40,7 @@ describe('Controls', () => {
     // expect.wrapperShallow.state('input').toEqual('Chicago, IL')
   })
 
-  it.only('should clear the input state on click of submit', () => {
+  it('should clear the input state on click of submit', () => {
     wrapperShallow = shallow(<Controls handleClick = {mockFn} />)
     var button  = wrapperShallow.find('input[type="submit"]');
     var search = wrapperShallow.find('#search-input');

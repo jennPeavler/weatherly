@@ -1,6 +1,7 @@
 import App from '../lib/components/App'
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import MockData_2 from './MockData/MockData_2'
 
 let app;
 let wrapperShallow;
@@ -15,6 +16,11 @@ describe('App', () => {
     wrapperMount = mount(<App />)
     searchField = wrapperMount.find('input[type="text"]')
     submitButton = wrapperMount.find('input[type="submit"]')
+  })
+
+  it('should brighten your day a little', () => {
+    console.log('I hope your day is filled with rainbows')
+    console.log('🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈 🌈')
   })
 
   it('should start with no location', () => {
@@ -49,5 +55,11 @@ describe('App', () => {
   it('should allow user to type a city for which to find the weather', () => {
     searchField.simulate('change', {target: {value: 'Chicago, IL'}})
     expect(searchField.props().value).toEqual('Chicago, IL')
+  })
+
+  it('should change state if it is given weather data', () => {
+    expect(app.state.weather).toEqual({})
+    app.state.weather = MockData_2();
+    expect(app.state.weather).not.toBe({})
   })
 })
