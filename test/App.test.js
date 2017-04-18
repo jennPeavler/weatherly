@@ -50,5 +50,4 @@ describe('App', () => {
     searchField.simulate('change', {target: {value: 'Chicago, IL'}})
     expect(searchField.props().value).toEqual('Chicago, IL')
   })
-
 })
