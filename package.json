@@ -50,6 +50,5 @@
   },
   "dependencies": {
     "webpack-dev-server": "^1.16.5",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   }
 }
